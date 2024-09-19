@@ -24,3 +24,22 @@ else {
     alert("O dog não pode se aposentar, pois ele tem "+calculo)
 }
 }
+
+function executar1008(){
+    let id, horas, valorHora, salario
+    id = Number(prompt("Digite seu id: "))
+    horas = Number(prompt("Quantas horas você trabalhou?"))
+    valorHora = Number(prompt("Quanto você ganha por hora?"))
+    salario = horas * valorHora
+    alert("ID: "+ id + "\nSalário: R$" + salario.toFixed(2))
+}
+
+function executar1009(){
+    let id, salarioFixo, comissao
+    id = prompt("Digite seu nome e sobrenome: ")
+    salarioFixo = Number(prompt("Digite o seu salário fixo: "))
+    comissao = Number(prompt("Digite a sua comissão total: "))
+    let salarioTotal = salarioFixo + (comissao * 0.15)
+    alert("Funcionário: " + id + "\nSalário fixo: R$" + salarioFixo 
+    + "\nSalário total + comissão: R$" + salarioTotal.toFixed(2))
+}
