@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro site!</title>
+</head>
+<body style="text-align: center;">
+    <!--consegue comentar-->
+    <h1>Meu primeiro site? 💻🖱</h1>
+    <p>Isso é um parágrafo (●'◡'●)</p>
+    <label for="nome">Nome:</label>
+    <input id="nome" type="text" placeholder="Ex: João Silva"><br>
+    <button onclick="boasVindas()">Clique aqui</button><br>
+    <button onclick="parOuImpar()">Par ou Impar</button><br>
+    <button onclick="media()">media</button><br>
+    <button onclick="volume()">volume</button><br>
+    <button onclick="pesca()">pesca</button><br>
+    <button onclick="conversao()">conversao</button><br>
+    <button onclick="pagCalcMed()">Media System</button><br>
+    <script>
+        function boasVindas(){
+            let nome = document.getElementById("nome").value;
+            let ano = prompt("Bem-vindo, "+nome+"! Digite seu ano de nascimento!");
+            if(2024 - ano >= 18){
+                alert("Portanto tu éish maior de idade, poish teinx "+(2024-ano)+" anos");
+            }
+            else{
+                alert("Portanto tu éish menor de idade, poish teinx "+(2024-ano)+" anos");
+            }
+        }
+
+        function parOuImpar(){
+            let n = prompt("Escreva um número!");
+            if(n % 2 == 0){
+                alert("É par!");
+            }
+            else{
+                alert("É impar!");
+            }
+        }
+        
+        function media(){
+            let n1 = Number(prompt("Digite a 1ª nota"));
+            let n2 = Number(prompt("Digite a 2ª nota"));
+            let m = (n1 + n2) / 2;
+            alert("Sua média é de "+m);
+        }
+        
+        function volume(){
+            let altura = Number(prompt("Digite o altura"));
+            let comprimento = Number(prompt("Digite o comprimento"));
+            let largura = Number(prompt("Digite a largura"));
+            let volume = comprimento * altura * largura;
+            alert("O volume do seu móvel é: "+volume+"m³");
+        }
+        
+        function pesca(){
+            let pesoPermitido = Number(prompt("Digite o peso permitido"));
+            let qtdPescado = Number(prompt("Digite o peso pescado"));
+            let multaPorPeso = Number(prompt("Digite a multa por excesso"));
+            if(qtdPescado > pesoPermitido){
+                let diferenca = qtdPescado - pesoPermitido;
+                let multa = diferenca * multaPorPeso;
+                alert("O peso excedeu em "+diferenca+"Kg, Portanto deverá pagar multa de R$"+multa);
+            }
+            else{
+                alert("O peso está dentro do limite permitido, portanto não precisa pagar multa.");
+            }   
+        }
+
+        function conversao(){ 
+            let opcao = prompt("Que conversão deseja fazer?\nDigite 1 para: Celsius para Farenheit\nDigite 2 para: Farenheit para Celsius\nDigite 3 para: Celsius para kelvin\nDigite 4 para: Kelvin para Celsius\nDigite 5 para: Farenheit para Kelvin\nDigite 6 para: Kelvin para Farenheit\n");
+            if(opcao ==1){
+                let t = Number(prompt("Digite a temperatura em Celsius\n"));
+                let r = (t * 1.8)+32;
+                alert("A temperatura em Farenheit é: "+r);
+            }
+            else if(opcao ==2){
+                t = Number(prompt("Digite a temperatura em Farenheit\n"));
+                r = (t-32) * (5/9);
+                alert("A temperatura em Celsius é: "+r);
+            }
+            else if(opcao ==3){
+                t = Number(prompt("Digite a temperatura em Celsius\n"));
+                r = t + 273.15;
+                alert("A temperatura em Kelvin é: "+r);
+            }
+            else if(opcao ==4){
+                t = Number(prompt("Digite a temperatura em Kelvin\n"));
+                r = t - 273.15;
+                alert("A temperatura em Celsius é: "+r);
+            }
+            else if(opcao ==5){
+                t = Number(prompt("Digite a temperatura em Farenheit\n"));
+                r = ((t - 32) * (5/9)) + 273.15;
+                alert("A temperatura em Kelvin é: "+r);
+            }
+            else if(opcao ==6){
+                t = Number(prompt("Digite a temperatura em Kelvin\n"));
+                r = (t - 273.15) * (9/5) + 32;
+                alert("A temperatura em Farenheit é: "+r);
+            }
+            else{
+                alert("Opção inválida, saindo do sistema!");
+            }
+        }
+        
+        function pagCalcMed(){
+            window.location.href = "mediaSystem.html";
+            // window.open("mediaSystem.html");
+        }
+
+    </script>
+</body>
+</html>
