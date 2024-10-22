@@ -1,0 +1,46 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    border-style: double;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background-color: aquamarine;
+}
+.register{
+    text-align: center;
+    border-style: groove;
+    width: 45vw;
+    border-radius: 15px;
+    background-color: bisque;
+}
+.login{
+    text-align: center;
+    border-style: groove;
+    width: 45vw;
+    border-radius: 15px;
+    background-color: bisque;
+}
+#adiciona{
+    width: 100%;
+    height: 25px;
+    background-color: antiquewhite;
+    border-radius: 15px;
+}
+#logar{
+    width: 100%;
+    height: 25px;
+    background-color: antiquewhite;
+    border-radius: 15px;
+}
+input{
+    width: 200px;
+    height: 20px;
+    border-radius: 15px;
+}
