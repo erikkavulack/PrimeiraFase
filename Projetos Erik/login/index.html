@@ -9,17 +9,29 @@
 <body>
     <div class="container">
         <h1>Sisitema de Login</h1>
-        <div class="register">
+        <div class="crud">
             <h3>Cadastro de Usuário</h3>
             <label for="username">Nome do Usuário</label>
             <input type="text" id="username" placeholder="Ex: Erik"><br>
             <button onclick="add()" id="adiciona">Cadastrar</button>
         </div>
-        <div class="login">
+        <div class="crud">
             <h3>Logar</h3>
             <label for="user">Nome do Usuário</label>
             <input type="text" id="user" placeholder="Ex: Erik"><br>
             <button onclick="login()" id="logar">Entrar</button>
+        </div>
+        <div class="crud">
+            <h3>Editar</h3>
+            <label for="userEdit">Nome do Usuário</label>
+            <input type="text" id="userEdit" placeholder="Ex: Erik"><br>
+            <button onclick="edit()" id="edit">Editar</button>
+        </div>
+        <div class="crud">
+            <h3>Excluir</h3>
+            <label for="userDelete">Nome do Usuário</label>
+            <input type="text" id="userDelete" placeholder="Ex: Erik"><br>
+            <button onclick="remove()" id="delete">Remover</button>
         </div>
     </div>
     <script src="script.js"></script>

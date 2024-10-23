@@ -11,32 +11,37 @@ body{
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
-    background-color: aquamarine;
+    background-color: rgb(133, 133, 133);
 }
-.register{
+.crud{
     text-align: center;
     border-style: groove;
     width: 45vw;
     border-radius: 15px;
-    background-color: bisque;
-}
-.login{
-    text-align: center;
-    border-style: groove;
-    width: 45vw;
-    border-radius: 15px;
-    background-color: bisque;
+    background-color: rgb(255, 255, 255);
 }
 #adiciona{
     width: 100%;
     height: 25px;
-    background-color: antiquewhite;
+    background-color: rgb(255, 0, 0);
     border-radius: 15px;
 }
 #logar{
     width: 100%;
     height: 25px;
-    background-color: antiquewhite;
+    background-color: rgb(30, 255, 0);
+    border-radius: 15px;
+}
+#edit{
+    width: 100%;
+    height: 25px;
+    background-color: rgb(0, 255, 242);
+    border-radius: 15px;
+}
+#delete{
+    width: 100%;
+    height: 25px;
+    background-color: rgb(229, 255, 0);
     border-radius: 15px;
 }
 input{
