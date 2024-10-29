@@ -1,35 +1,40 @@
 let bancoDeDados = [];
 function add() {
-    let usuario = document.getElementById("username").value;
-    if (existe(usuario) == false) {
-        bancoDeDados.push(usuario.toUpperCase());
+    let usuario = {
+        username: document.getElementById("username").value.toUpperCase(),
+        password: document.getElementById("senha").value
+    }
+    if (existe(usuario.username) == false) {
+        bancoDeDados.push(usuario);
         alert("Usuário cadastrado com sucesso!");
         document.getElementById("username").value = null
-    }
-    else {
+        document.getElementById("senha").value = null
+    } else {
         alert("Esse usuário já foi cadastrado!")
     }
 }
 
 function login() {
-    let usuario = document.getElementById("user").value;
-    if (existe(usuario) == false) {
-        alert("usuário não cadastrado!")
+    let usuario = document.getElementById("user").value.toUpperCase();
+    let senha = document.getElementById("pass").value;
+    if (autentica(usuario, senha) == false) {
+        alert("Falha na autenticação!")
     } else {
-        alert("Bem vindo ao sitema!");
+        alert("Bem vindo ao sistema!");
     }
     document.getElementById("user").value = null
+    document.getElementById("pass").value = null
 }
 
 function remove() {
-    let usuario = document.getElementById("userDelete").value;
-    let pos = bancoDeDados.indexOf(usuario.toUpperCase());
-    if (pos == -1) {
-        alert("usuário não cadastrado!");
+    let usuario = document.getElementById("userDelete").value.toUpperCase();
+    let pos = indexOfByErik(username);
+    if (pos != -1) {
+        bancoDeDados.splice(pos, 1);
+        alert(username + " foi removido com sucesso!");
     } 
     else {
-        bancoDeDados.splice(pos, 1);
-        alert("Usuário excluído com sucesso!");
+        alert(usuario + " não foi encontrado no banco de dados!");
     }
     document.getElementById("userDelete").value = null;
 }
@@ -49,11 +54,28 @@ function edit() {
 }
 
 function existe(username){
-    let pos = bancoDeDados.indexOf(username.toUpperCase());
-    if(pos == -1){
-        return false;
-    }
-    else{
+    for(let usuario of bancoDeDados){
+        if(usuario.username == username){
         return true;
+        }
     }
+    return false;
+}
+
+function autentica(username, password){
+    for(let usuario of bancoDeDados){
+        if(usuario.username == username && usuario.password == password){
+        return true;
+        }
+    }
+    return false;
+}
+
+function indexOfByErik(username){
+    for(let usuario of bancoDeDados){
+        if(usuario.username == username){
+            return bancoDeDados.indexOf(usuario);
+        }
+    }
+    return -1;
 }
