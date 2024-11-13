@@ -1,0 +1,41 @@
+body{
+    text-align: center;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section{
+    border-radius: 15px;
+    border-style: groove;
+    background-color: rgb(136, 122, 122);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    width: 75%;
+    border-radius: 7px;
+    height: 5vh;
+}
+button{
+    width: 75%;
+    background-color: rgb(179, 202, 202);
+    border-radius: 15px;
+}
+button:hover{
+    background-color: grey;
+}
+h1{
+    font-family: sans-serif;
+    color: bisque;
+}
+h3{
+    font-family: sans-serif;
+    color: bisque;
+}
+label{
+    font-family: sans-serif;
+    color: bisque;
+}
