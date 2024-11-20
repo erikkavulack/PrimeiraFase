@@ -14,12 +14,23 @@
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Senha</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
             <!-- Linhas de dados serão adicionadas aqui dinamicamente -->
         </tbody>
     </table>
+    <!-- Definição do modal -->
+    <div id="modalExcluir" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Deseja realmente excluir o usuário <span id="usuarioNome"></span>?</p>
+            <button id="confirmarExcluir">Excluir</button>
+            <button id="cancelarExcluir">Cancelar</button>
+        </div>
+    </div>
+
     <script src="scripttabela.js"></script>
 </body>
 </html>
