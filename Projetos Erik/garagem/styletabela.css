@@ -1,0 +1,16 @@
+/* Estilização para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre as células */
+}
+/* Estilização para as células da tabela */
+th, td {
+    border: 1px solid #ddd; /* Define borda */
+    padding: 8px; /* Espaçamento interno */
+    text-align: left; /* Alinhamento do texto */
+}
+/* Estilização para o cabeçalho da tabela */
+th {
+    background-color: #f2f2f2; /* Cor de fundo */
+    color: black; /* Cor do texto */
+}
