@@ -11,16 +11,28 @@
     <table id="tabelaDados">
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Placa</th>
                 <th>Marca</th>
                 <th>Modelo</th>
                 <th>Ano</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
             <!-- Linhas de dados serão adicionadas aqui dinamicamente -->
         </tbody>
     </table>
+
+     <div id="modalAcoes" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Configurações do veículo <span id="veiculoPlaca"></span>?</p>
+            <button id="btnExcluir">Excluir</button>
+            <button id="btnEditar">Editar</button>
+        </div>
+    </div>
+
     <script src="scripttabela.js"></script>
 </body>
 </html>

@@ -6,8 +6,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const marca = document.getElementById('marca').value;
         const modelo = document.getElementById('modelo').value;
         const ano = document.getElementById('ano').value;
-        const veiculo = { placa, marca, modelo, ano };
+
         let veiculos = JSON.parse(localStorage.getItem('garagem')) || [];
+        let id = veiculos.length ? veiculos[veiculos.length - 1].id + 1 : 1;
+        while (veiculos.some(veiculo => veiculo.id === id)) {
+    		id++;
+        }
+
+        const veiculo = { id, placa, marca, modelo, ano };
+
         veiculos.push(veiculo);
         localStorage.setItem('garagem', JSON.stringify(veiculos));
         modal.style.display = "block";
